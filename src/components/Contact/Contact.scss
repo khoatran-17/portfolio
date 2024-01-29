@@ -1,0 +1,139 @@
+@import '../../App.scss';
+
+.contact {
+  height: 100%;
+  background: linear-gradient(180deg, #f3876d, #204770);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .contactWrapper {
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    height: 100%;
+    margin: auto;
+
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .contactText {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+
+      @include mobile {
+        gap: 10px;
+      }
+
+      @include tablet {
+        justify-content: flex-end;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 6rem;
+        color: #78cbc1;
+
+        @include mobile {
+          font-size: 3rem;
+          z-index: 999;
+        }
+      }
+
+      .contactItem {
+        h2 {
+          font-size: 2rem;
+        }
+
+        span,
+        a {
+          font-weight: 300;
+          font-size: 1.5rem;
+        }
+
+        a {
+          display: inline-block;
+          width: 100px;
+          height: 100px;
+
+          button {
+            padding: 10px;
+            border: none;
+            background-color: #9b5974;
+            color: white;
+            font-size: 1.25rem;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+
+    .contactForm {
+      flex: 1;
+      position: relative;
+      z-index: 99;
+
+      @include mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .emailSvg {
+        position: absolute;
+        margin: auto;
+        stroke: #78cbc1;
+        stroke-width: 3;
+        z-index: 98;
+
+        @include mobile {
+          transform: scale(0.5);
+        }
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        input,
+        textarea {
+          padding: 20px;
+          background-color: transparent;
+          border: 1px solid white;
+          color: white;
+          border-radius: 10px;
+        }
+
+        button {
+          padding: 20px;
+          border: none;
+          background-color: #9b5974;
+          color: white;
+          font-size: 1.5rem;
+          cursor: pointer;
+          font-weight: bold;
+          border-radius: 10px;
+
+          @include mobile {
+            padding: 10px;
+            font-size: 1rem;
+          }
+        }
+
+        ::placeholder {
+          color: white;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

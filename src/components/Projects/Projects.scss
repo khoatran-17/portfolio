@@ -1,0 +1,125 @@
+@import '../../App.scss';
+
+.projects {
+  position: relative;
+  background: linear-gradient(180deg, #204770, #f3876d);
+
+  .title {
+    position: sticky;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #78cbc1;
+    font-size: 2rem;
+    background-color: transparent;
+
+    @include mobile {
+      padding-top: calc(100vh - 75px);
+      font-size: 1rem;
+      z-index: 2000;
+    }
+
+    h1 {
+      font-weight: bold;
+    }
+
+    .progressBar {
+      height: 10px;
+      background: white;
+      border-radius: 10px;
+
+      @include mobile {
+        background: #cee0ec;
+      }
+    }
+  }
+
+  .projectContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .wrapper {
+      max-width: 1300px;
+      height: 100%;
+      margin: auto;
+      display: flex;
+      gap: 50px;
+
+      @include tablet {
+        flex-direction: column;
+        padding: 0;
+      }
+
+      .imgContainer {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mobile {
+          padding-top: 25%;
+          width: 80%;
+        }
+
+        @include tablet {
+          padding-top: 15%;
+        }
+
+        img {
+          max-width: 500px;
+          height: 100%;
+          width: 100%;
+          border-radius: 10px;
+        }
+      }
+
+      .projectDescContainer {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        @include tablet {
+          align-items: center;
+          justify-content: center;
+        }
+
+        h2 {
+          font-size: 5rem;
+          color: #78cbc1;
+
+          @include mobile {
+            font-size: 3rem;
+          }
+        }
+
+        p {
+          font-size: 1.5rem;
+
+          @include tablet {
+            text-align: center;
+            width: 80%;
+          }
+        }
+
+        a {
+          display: inline-block;
+          text-align: center;
+          background-color: #9b5974;
+          border: none;
+          border-radius: 10px;
+          width: 200px;
+          padding: 10px;
+          cursor: pointer;
+          color: white;
+          font-weight: 500;
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
